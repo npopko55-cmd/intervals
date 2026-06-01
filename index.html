@@ -28,7 +28,7 @@
   <!-- Preload hero-картинки -->
   <link rel="preload" as="image" href="assets/hero/hero-2girls.webp" fetchpriority="high" />
 
-  <link rel="stylesheet" href="styles.css?v=intv-B" />
+  <link rel="stylesheet" href="styles.css?v=intv-C" />
 </head>
 <body>
 
@@ -139,15 +139,6 @@
 <!-- 2. ПРОДУКТОВЫЙ ОФФЕР — большая фраза о лете                  -->
 <!-- ============================================================ -->
 <section class="section offer" id="offer">
-  <!-- Декоративные фото летних образов вокруг текста (5 шт) — только на десктопе/планшете -->
-  <div class="offer__photos" aria-hidden="true">
-    <div class="offer__photo offer__photo--1" style="background-image:url('assets/offer/w1-balcony.webp');"></div>
-    <div class="offer__photo offer__photo--2" style="background-image:url('assets/offer/w2-yellow.webp');"></div>
-    <div class="offer__photo offer__photo--3" style="background-image:url('assets/offer/w3-white.webp');"></div>
-    <div class="offer__photo offer__photo--4" style="background-image:url('assets/offer/w4-beach.webp');"></div>
-    <div class="offer__photo offer__photo--5" style="background-image:url('assets/offer/w5-floral.webp');"></div>
-  </div>
-
   <div class="container">
     <p class="offer__text">
       Это лето ты встретишь <span class="offer__hl">в&nbsp;коротких шортах</span> и&nbsp;лёгких платьях.
@@ -156,6 +147,15 @@
     <p class="offer__sub">
       За&nbsp;10&nbsp;дней интервальных тренировок дома мы&nbsp;запустим естественное жиросжигание, разгоним метаболизм и&nbsp;подготовим тело к&nbsp;открытому сезону.
     </p>
+  </div>
+
+  <!-- Декоративные фото летних образов: на десктопе — absolute по краям, на мобиле — полосой под текстом -->
+  <div class="offer__photos" aria-hidden="true">
+    <div class="offer__photo offer__photo--1" style="background-image:url('assets/offer/w1-balcony.webp');"></div>
+    <div class="offer__photo offer__photo--2" style="background-image:url('assets/offer/w2-yellow.webp');"></div>
+    <div class="offer__photo offer__photo--3" style="background-image:url('assets/offer/w3-white.webp');"></div>
+    <div class="offer__photo offer__photo--4" style="background-image:url('assets/offer/w4-beach.webp');"></div>
+    <div class="offer__photo offer__photo--5" style="background-image:url('assets/offer/w5-floral.webp');"></div>
   </div>
 </section>
 

@@ -2176,10 +2176,43 @@ h1, h2, h3 { font-family: var(--font-h); font-weight: 500; margin: 0; line-heigh
 }
 
 @media (max-width: 768px) {
-  .offer { padding: 64px 0; }
+  .offer { padding: 56px 0 80px; }
   .offer__sub { margin-top: 24px; }
-  /* На мобиле фото только сверху и снизу, маленькие, чтобы текст оставался героем */
-  .offer__photos { display: none; }
+  /* На мобиле фото идут ПОЛОСОЙ под текстом, с наклонами */
+  .offer__photos {
+    position: relative;
+    inset: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    margin: 40px auto 0;
+    padding: 30px 0 30px;     /* чтобы наклонённые фото не обрезались */
+    overflow: visible;
+  }
+  .offer__photo {
+    position: relative;
+    inset: auto;
+    margin: 0;
+    flex-shrink: 0;
+    border-width: 4px;
+  }
+  /* Все 5 фото в ряд с лёгким нахлёстом и разными наклонами */
+  .offer__photo--1 { width: 80px; height: 110px; transform: rotate(-7deg); margin-right: -10px; z-index: 5; }
+  .offer__photo--2 { width: 80px; height: 110px; transform: rotate(3deg);  margin-right: -10px; z-index: 4; }
+  .offer__photo--3 { width: 80px; height: 110px; transform: rotate(-2deg); margin-right: -10px; z-index: 3; display: block; }
+  .offer__photo--4 { width: 80px; height: 110px; transform: rotate(5deg);  margin-right: -10px; z-index: 2; display: block; }
+  .offer__photo--5 { width: 80px; height: 110px; transform: rotate(-4deg);                       z-index: 1; display: block; }
+  .offer__photos:hover .offer__photo { /* при hover на тач почти не работает — оставлено для тест-курсора */ }
+}
+@media (max-width: 480px) {
+  /* На самых узких — фото чуть меньше + сильнее нахлёст, чтобы не вылазили */
+  .offer__photo--1,
+  .offer__photo--2,
+  .offer__photo--3,
+  .offer__photo--4,
+  .offer__photo--5 { width: 64px; height: 88px; margin-right: -14px; }
+  .offer__photo--5 { margin-right: 0; }
 }
 
 /* 3. METHOD — схема интервалов с бегущим ползунком */
