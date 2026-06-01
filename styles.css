@@ -2053,19 +2053,23 @@ h1, h2, h3 { font-family: var(--font-h); font-weight: 500; margin: 0; line-heigh
 /* 2. PRODUCT OFFER — большая типографическая фраза о лете */
 .offer {
   background: #fff;
-  padding: 100px 0;
+  padding: 120px 0;
   text-align: center;
+  position: relative;
+  overflow: hidden;          /* фото за пределами не должны давать горизонтальный скролл */
 }
 .offer__text {
   font-family: var(--font-h);
   font-weight: 500;
-  font-size: clamp(28px, 4.6vw, 56px);
+  font-size: clamp(28px, 4.2vw, 52px);
   line-height: 1.12;
   letter-spacing: -0.03em;
   color: var(--color-text);
-  max-width: 1040px;
+  max-width: 720px;          /* уже чем раньше — оставляем место для декоративных фото по краям */
   margin: 0 auto;
   text-wrap: balance;
+  position: relative;
+  z-index: 1;                /* над фото */
 }
 .offer__hl {
   display: inline-block;
@@ -2090,12 +2094,92 @@ h1, h2, h3 { font-family: var(--font-h); font-weight: 500; margin: 0; line-heigh
   font-size: clamp(16px, 1.6vw, 19px);
   line-height: 1.55;
   color: var(--color-muted);
-  max-width: 760px;
+  max-width: 600px;
   margin: 36px auto 0;
+  position: relative;
+  z-index: 1;
 }
+
+/* Декоративные фото летних образов вокруг текста (5 шт, polaroid-style) */
+.offer__photos {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+.offer__photo {
+  position: absolute;
+  background-size: cover;
+  background-position: center 20%;
+  border-radius: 14px;
+  box-shadow: 0 14px 32px rgba(31, 19, 0, 0.18);
+  border: 6px solid #fff;
+  overflow: hidden;
+}
+/* Раскладка под десктоп: 2 слева, 2 справа, 1 у нижнего центра-смещ. */
+.offer__photo--1 {
+  /* Чёрный пиджак + белое платье — верх-лево */
+  top: 60px;
+  left: 2vw;
+  width: 170px;
+  height: 240px;
+  transform: rotate(-5deg);
+}
+.offer__photo--2 {
+  /* Жёлтое платье — низ-лево */
+  bottom: 90px;
+  left: 5vw;
+  width: 160px;
+  height: 200px;
+  transform: rotate(4deg);
+}
+.offer__photo--3 {
+  /* Белое свадебное — верх-право */
+  top: 80px;
+  right: 3vw;
+  width: 160px;
+  height: 220px;
+  transform: rotate(6deg);
+}
+.offer__photo--4 {
+  /* Пляж + закат — низ-право */
+  bottom: 70px;
+  right: 6vw;
+  width: 170px;
+  height: 230px;
+  transform: rotate(-4deg);
+}
+.offer__photo--5 {
+  /* Красное цветочное — центр-низ, лёгкое смещение */
+  bottom: 30px;
+  left: 50%;
+  margin-left: -90px;
+  width: 140px;
+  height: 180px;
+  transform: rotate(-2deg);
+  display: none;             /* по умолчанию скрыто — включаем на широких экранах */
+}
+
+@media (min-width: 1280px) {
+  .offer__photo--5 { display: block; }
+  .offer__photo--1 { left: 3vw; }
+  .offer__photo--4 { right: 7vw; }
+}
+
+@media (max-width: 1023px) {
+  /* На планшете — оставляем только 2 фото поменьше, чтоб не теснили текст */
+  .offer__photo--3,
+  .offer__photo--4,
+  .offer__photo--5 { display: none; }
+  .offer__photo--1 { width: 130px; height: 180px; top: 30px; left: 12px; }
+  .offer__photo--2 { width: 130px; height: 170px; bottom: 30px; right: 12px; left: auto; }
+}
+
 @media (max-width: 768px) {
   .offer { padding: 64px 0; }
   .offer__sub { margin-top: 24px; }
+  /* На мобиле фото только сверху и снизу, маленькие, чтобы текст оставался героем */
+  .offer__photos { display: none; }
 }
 
 /* 3. METHOD — схема интервалов с бегущим ползунком */
