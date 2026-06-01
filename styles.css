@@ -2327,6 +2327,18 @@ h1, h2, h3 { font-family: var(--font-h); font-weight: 500; margin: 0; line-heigh
 .bonus__hl {
   color: var(--color-primary);
 }
+.bonus__brand {
+  font-family: 'Caveat', cursive;
+  font-weight: 700;
+  color: var(--color-primary);
+  display: inline-block;
+  font-size: 1.15em;
+  letter-spacing: -0.01em;
+  line-height: 0.9;
+  transform: rotate(-3deg);
+  white-space: nowrap;
+  padding: 0 0.05em;
+}
 .bonus__lead {
   font-size: clamp(15px, 1.5vw, 17px);
   line-height: 1.55;
