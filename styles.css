@@ -1541,6 +1541,18 @@ h1, h2, h3 { font-family: var(--font-h); font-weight: 500; margin: 0; line-heigh
   .hero__lead { font-size: 16px; }
   .hero__chip { font-size: 12px; padding: 6px 12px; }
   .hero__avatars img { width: 34px; height: 34px; margin-left: -9px; }
+  /* Если используется strip (1 PNG со всеми аватарками) — мобиле даём естественные пропорции */
+  .hero__avatars--strip { height: 36px; }
+  .hero__avatars--strip img {
+    width: auto !important;
+    height: 100% !important;
+    max-width: 100%;
+    margin-left: 0 !important;
+    border-radius: 0;
+    border: 0;
+    background: transparent;
+    object-fit: contain;
+  }
   .hero__floating-card { padding: 12px 14px; gap: 12px; bottom: 14px; left: 14px; right: 14px; }
   .hero__floating-emoji { font-size: 24px; }
   .hero__floating-card strong { font-size: 14px; }
@@ -2150,18 +2162,12 @@ h1, h2, h3 { font-family: var(--font-h); font-weight: 500; margin: 0; line-heigh
   transform: rotate(-4deg);
 }
 .offer__photo--5 {
-  /* Красное цветочное — центр-низ, лёгкое смещение */
-  bottom: 30px;
-  left: 50%;
-  margin-left: -90px;
-  width: 140px;
-  height: 180px;
-  transform: rotate(-2deg);
-  display: none;             /* по умолчанию скрыто — включаем на широких экранах */
+  /* Пляжное белое — НЕ показываем на десктопе/планшете (user-просьба: только 4 фото)
+     На мобиле включается в @media (max-width: 768px) ниже. */
+  display: none;
 }
 
 @media (min-width: 1280px) {
-  .offer__photo--5 { display: block; }
   .offer__photo--1 { left: 3vw; }
   .offer__photo--4 { right: 7vw; }
 }
