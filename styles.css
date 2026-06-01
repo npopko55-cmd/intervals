@@ -2431,7 +2431,15 @@ h1, h2, h3 { font-family: var(--font-h); font-weight: 500; margin: 0; line-heigh
 @media (max-width: 900px) {
   .bonus { padding: 64px 0; }
   .bonus__card { grid-template-columns: 1fr; padding: 40px 28px; gap: 32px; border-radius: 24px; }
+  .bonus__text, .bonus__visual { min-width: 0; }    /* grid children should not stretch past parent */
   .bonus__visual { max-width: 280px; margin: 0 auto; }
+}
+@media (max-width: 540px) {
+  .bonus__card { padding: 32px 22px; gap: 28px; border-radius: 20px; }
+  .bonus__h2 { font-size: clamp(22px, 6.5vw, 30px); }
+  .bonus__brand { font-size: 1.1em; }                /* рукопись чуть скромнее, чтобы не растягивать строку */
+  .bonus__lead { font-size: 15px; }
+  .bonus__visual { max-width: 220px; }
 }
 
 /* 6. LICENSE — Государство подтверждает */
@@ -2497,6 +2505,7 @@ h1, h2, h3 { font-family: var(--font-h); font-weight: 500; margin: 0; line-heigh
   width: 132px;
   height: 132px;
   object-fit: cover;
+  object-position: center 20%;     /* поднимаем кадр, чтобы лица не обрезались */
   border-radius: 14px;
   flex-shrink: 0;
 }
@@ -2530,7 +2539,7 @@ h1, h2, h3 { font-family: var(--font-h); font-weight: 500; margin: 0; line-heigh
   .license__grid { grid-template-columns: 1fr; gap: 36px; }
   .license__certificate { order: -1; max-width: 380px; margin: 0 auto; }
   .license__card { flex-direction: column; align-items: flex-start; }
-  .license__card-photo { width: 100%; height: 200px; }
+  .license__card-photo { width: 100%; height: 240px; object-position: center 15%; }  /* выше + крупнее, чтобы лица влезли целиком */
 }
 @media (max-width: 540px) {
   .license__row { gap: 12px; }
