@@ -2184,6 +2184,9 @@ h1, h2, h3 { font-family: var(--font-h); font-weight: 500; margin: 0; line-heigh
 @media (max-width: 768px) {
   .offer { padding: 56px 0 80px; }
   .offer__sub { margin-top: 24px; }
+  /* На мобиле меняем финальную точку на двоеточие — подводка к ленте фоток ниже */
+  .offer__sub-end { font-size: 0; }
+  .offer__sub-end::after { content: ':'; font-size: 1rem; }
   /* На мобиле — 3 фото покрупнее, полосой под текстом с разными наклонами */
   .offer__photos {
     position: relative;
