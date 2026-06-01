@@ -2178,7 +2178,7 @@ h1, h2, h3 { font-family: var(--font-h); font-weight: 500; margin: 0; line-heigh
 @media (max-width: 768px) {
   .offer { padding: 56px 0 80px; }
   .offer__sub { margin-top: 24px; }
-  /* На мобиле фото идут ПОЛОСОЙ под текстом, с наклонами */
+  /* На мобиле — 3 фото покрупнее, полосой под текстом с разными наклонами */
   .offer__photos {
     position: relative;
     inset: auto;
@@ -2186,8 +2186,8 @@ h1, h2, h3 { font-family: var(--font-h); font-weight: 500; margin: 0; line-heigh
     justify-content: center;
     align-items: center;
     gap: 0;
-    margin: 40px auto 0;
-    padding: 30px 0 30px;     /* чтобы наклонённые фото не обрезались */
+    margin: 44px auto 0;
+    padding: 30px 0;          /* чтобы наклонённые фото не обрезались */
     overflow: visible;
   }
   .offer__photo {
@@ -2195,24 +2195,22 @@ h1, h2, h3 { font-family: var(--font-h); font-weight: 500; margin: 0; line-heigh
     inset: auto;
     margin: 0;
     flex-shrink: 0;
-    border-width: 4px;
+    border-width: 5px;
   }
-  /* Все 5 фото в ряд с лёгким нахлёстом и разными наклонами */
-  .offer__photo--1 { width: 80px; height: 110px; transform: rotate(-7deg); margin-right: -10px; z-index: 5; }
-  .offer__photo--2 { width: 80px; height: 110px; transform: rotate(3deg);  margin-right: -10px; z-index: 4; }
-  .offer__photo--3 { width: 80px; height: 110px; transform: rotate(-2deg); margin-right: -10px; z-index: 3; display: block; }
-  .offer__photo--4 { width: 80px; height: 110px; transform: rotate(5deg);  margin-right: -10px; z-index: 2; display: block; }
-  .offer__photo--5 { width: 80px; height: 110px; transform: rotate(-4deg);                       z-index: 1; display: block; }
-  .offer__photos:hover .offer__photo { /* при hover на тач почти не работает — оставлено для тест-курсора */ }
+  /* Показываем только 3 фото (w1 / w2 / w5), остальные прячем */
+  .offer__photo--3,
+  .offer__photo--4 { display: none; }
+  .offer__photo--1 { width: 108px; height: 148px; transform: rotate(-7deg); margin-right: -14px; z-index: 3; display: block; }
+  .offer__photo--2 { width: 108px; height: 148px; transform: rotate(3deg);                       z-index: 2; display: block; }
+  .offer__photo--5 { width: 108px; height: 148px; transform: rotate(-4deg); margin-left: -14px;  z-index: 1; display: block; }
 }
-@media (max-width: 480px) {
-  /* На самых узких — фото чуть меньше + сильнее нахлёст, чтобы не вылазили */
+@media (max-width: 400px) {
+  /* На самых узких (iPhone SE) — чуть меньше */
   .offer__photo--1,
   .offer__photo--2,
-  .offer__photo--3,
-  .offer__photo--4,
-  .offer__photo--5 { width: 64px; height: 88px; margin-right: -14px; }
-  .offer__photo--5 { margin-right: 0; }
+  .offer__photo--5 { width: 92px; height: 126px; }
+  .offer__photo--1 { margin-right: -16px; }
+  .offer__photo--5 { margin-left: -16px; }
 }
 
 /* 3. METHOD — схема интервалов с бегущим ползунком */
