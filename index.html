@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="format-detection" content="telephone=no" />
+
+  <title>Шагай и Качай — интервальный интенсив от клуба Шагай Дома</title>
+  <meta name="description" content="10 дней интервальных тренировок дома. Шаги, сила и рельеф в одном формате. Старт 8 июня." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://walk-walk.ru/intervals" />
+  <meta property="og:title" content="Шагай и Качай — интервальный интенсив от клуба Шагай Дома" />
+  <meta property="og:description" content="10 дней интервальных тренировок дома. Шаги, сила и рельеф в одном формате. Старт 8 июня." />
+  <link rel="canonical" href="https://walk-walk.ru/intervals" />
+
+  <link rel="icon" type="image/png" sizes="32x32" href="https://static.tildacdn.com/tild3062-6234-4366-b031-623462313965/Frame_76.png" />
+  <link rel="apple-touch-icon" href="https://static.tildacdn.com/tild6330-6138-4737-b163-386235663363/Frame_76.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://static.tildacdn.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600&family=Inter:wght@400;500;600&family=Caveat:wght@600;700&display=swap&subset=latin,cyrillic" rel="stylesheet" />
+
+  <!-- Preload hero-картинки -->
+  <link rel="preload" as="image" href="https://static.tildacdn.com/tild3666-3131-4131-b165-646466333162/522A7887.jpg" fetchpriority="high" />
+
+  <link rel="stylesheet" href="styles.css?v=intv-2" />
+</head>
+<body>
+
+<!-- ============================================================ -->
+<!-- HEADER (sticky)                                              -->
+<!-- ============================================================ -->
+<header class="header" id="header">
+  <div class="container header__inner">
+    <a href="/" class="header__logo" aria-label="ШАГАЙ ДОМА">
+      <svg viewBox="0 0 106.01 49.13" fill="none" aria-hidden="true">
+        <path d="M27.36 36.85L22.19 37.4V20.22L14.26 20.6V38.26L8.68 38.86V20.87L0 21.28V45.81L34.6 41.41V19.62L27.36 19.97V36.85Z" fill="#CF2C02"/>
+        <path d="M45.94 19.08L37.8 41.01L44.66 40.14L45.69 36.55L52.88 35.73L53.87 38.97L60.11 38.17L52.84 18.75L45.94 19.08ZM47.1 31.89L49.36 24.26L51.6 31.46L47.1 31.89Z" fill="#CF2C02"/>
+        <path d="M76.12 17.63L62.29 18.29V37.9L67.87 37.19V22.73L76.12 22.18V17.63Z" fill="#CF2C02"/>
+        <path d="M87 34.76L91.75 34.15L86.22 17.15L81.01 17.4L74.91 36.29L80.05 35.64L80.83 32.55L86.25 31.93L87 34.76ZM81.88 28.52L83.58 21.92L85.28 28.19L81.88 28.52Z" fill="#CF2C02"/>
+        <path d="M102.2 23.79V32.82L105.92 32.35V16.2L102.22 16.38L97.21 25.93V16.62L93.16 16.81V33.97L97.21 33.46L102.2 23.79Z" fill="#CF2C02"/>
+        <path d="M99.07 18.22L103.82 6.75L100.67 6.76L101.32 0L96.48 11.33L99.58 11.26L99.07 18.22Z" fill="#CF2C02"/>
+      </svg>
+    </a>
+
+    <div class="header__actions">
+      <a href="#rates" class="btn btn--primary btn--sm" data-metrika-goal="intervals-header-cta">Получить интенсив</a>
+    </div>
+  </div>
+</header>
+
+<!-- ============================================================ -->
+<!-- MOBILE / OVERLAY NAV                                         -->
+<!-- ============================================================ -->
+<div class="overlay-nav" id="overlayNav" aria-hidden="true">
+  <button class="overlay-nav__close" id="closeNavBtn" aria-label="Закрыть меню">×</button>
+  <nav class="overlay-nav__list">
+    <a href="#about">Что такое интенсив</a>
+    <a href="#forwhom">Для кого</a>
+    <a href="#rates">Получить интенсив</a>
+    <a href="#contacts">Контакты</a>
+    <a href="https://walk-walk.ru/blog/" target="_blank" rel="noopener">Блог</a>
+  </nav>
+
+  <div class="overlay-nav__socials">
+    <a href="https://vk.com/walk_is_love" target="_blank" rel="noopener" aria-label="VK">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12.785 16.241s.288-.032.435-.193c.135-.148.13-.426.13-.426s-.018-1.298.582-1.49c.591-.188 1.35 1.254 2.155 1.808.609.42 1.072.328 1.072.328l2.155-.031s1.127-.07.593-.96c-.044-.073-.311-.659-1.604-1.864-1.354-1.262-1.172-1.058.458-3.249.993-1.334 1.39-2.149 1.266-2.498-.118-.332-.853-.244-.853-.244l-2.446.015s-.181-.025-.315.056c-.131.08-.215.265-.215.265s-.385.99-.9 1.831c-1.083 1.775-1.516 1.869-1.693 1.755-.412-.266-.31-1.075-.31-1.65 0-1.795.272-2.543-.531-2.738-.266-.064-.462-.107-1.143-.114-.874-.009-1.613.003-2.032.208-.279.136-.494.439-.363.456.162.022.529.099.724.365.252.342.243 1.113.243 1.113s.144 2.116-.337 2.378c-.331.18-.785-.187-1.751-1.852-.495-.852-.869-1.794-.869-1.794s-.072-.176-.201-.27c-.156-.114-.374-.15-.374-.15l-2.325.015s-.349.01-.477.161c-.114.135-.009.413-.009.413s1.821 4.259 3.884 6.406c1.892 1.967 4.04 1.838 4.04 1.838h.973z"/></svg>
+    </a>
+    <a href="https://dzen.ru/walkislove" target="_blank" rel="noopener" aria-label="Дзен">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 4.5c1.244 5.376 2.124 6.256 7.5 7.5-5.376 1.244-6.256 2.124-7.5 7.5-1.244-5.376-2.124-6.256-7.5-7.5 5.376-1.244 6.256-2.124 7.5-7.5z"/></svg>
+    </a>
+    <a href="https://ok.ru/group/70000006886921" target="_blank" rel="noopener" aria-label="OK">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 3.6c-2.04 0-3.696 1.66-3.696 3.7 0 2.04 1.656 3.696 3.696 3.696S15.696 9.34 15.696 7.3C15.696 5.26 14.04 3.6 12 3.6zm0 5.16c-.804 0-1.464-.66-1.464-1.46 0-.804.66-1.464 1.464-1.464.804 0 1.464.66 1.464 1.464 0 .8-.66 1.46-1.464 1.46zm5.236 5.04c-.276-.564-.984-1.036-2.072-.16-1.476 1.176-3.852 1.176-3.852 1.176s-2.376 0-3.852-1.176c-1.088-.876-1.796-.404-2.072.16-.48.984.09 1.452.708 1.984.528.456 2.508 1.224 4.36 1.392l-1.548 1.548c-.612.612-.224 1.572.604 1.572.512 0 1.024-.512 1.024-.512l1.776-1.776 1.776 1.776s.512.512 1.024.512c.828 0 1.216-.96.604-1.572l-1.548-1.548c1.852-.168 3.832-.936 4.36-1.392.618-.532 1.188-1 .708-1.984z"/></svg>
+    </a>
+    <a href="https://wa.me/905510983369" target="_blank" rel="noopener" aria-label="WhatsApp">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+    </a>
+  </div>
+
+  <div class="overlay-nav__cta">
+    <a href="#rates" class="btn btn--white btn--block">Получить интенсив</a>
+  </div>
+</div>
+<div class="overlay-nav__backdrop" id="overlayBackdrop"></div>
+
+<!-- ============================================================ -->
+<!-- 1. ГЛАВНАЯ / HERO                                            -->
+<!-- ============================================================ -->
+<section class="hero" id="top">
+  <div class="container">
+    <div class="hero__grid">
+      <div class="hero__card">
+        <div class="hero__chip">
+          <svg class="hero__chip-bolt" viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true">
+            <path d="M13 2L4.09 12.97c-.39.48-.05 1.18.58 1.18H10v8.32c0 .94 1.2 1.34 1.77.59L20.5 11.09c.36-.47.03-1.15-.57-1.15H14V2.68C14 1.74 12.78 1.34 12.21 2.09L13 2z"/>
+          </svg>
+          Флагманский интенсив от&nbsp;клуба Шагай Дома
+        </div>
+
+        <h1 class="hero__title">Шагай <span class="hero__title-amp">и</span> <span class="hero__title-accent2">Качай</span></h1>
+
+        <p class="hero__lead">10&nbsp;дней интервальных тренировок дома. <strong>Шаги, сила и&nbsp;рельеф</strong> в&nbsp;одном формате — без спортзала и&nbsp;тренажёров.</p>
+
+        <div class="hero__startbadge">
+          <span class="hero__startbadge-dot"></span>
+          Старт <strong>8&nbsp;июня</strong>
+        </div>
+
+        <a href="#rates" class="btn btn--white btn--lg btn--block hero__cta" data-metrika-goal="intervals-hero-cta">
+          <span>Получить интенсив</span>
+          <span class="hero__cta-arrow" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg>
+          </span>
+        </a>
+
+        <div class="hero__social-proof">
+          <div class="hero__avatars hero__avatars--strip">
+            <img src="https://optim.tildacdn.com/tild3533-3164-4761-b161-656464363663/-/resize/280x/-/format/webp/2.png.webp" alt="Фотографии участниц" />
+          </div>
+          <div class="hero__social-text">
+            <strong>30&nbsp;000+ женщин</strong> уже похудели<br/>с&nbsp;командой Шагай Дома
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__image-wrap">
+        <div class="hero__image" style="background-image:url('https://static.tildacdn.com/tild3666-3131-4131-b165-646466333162/522A7887.jpg');"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- 2. ПРОДУКТОВЫЙ ОФФЕР — большая фраза о лете                  -->
+<!-- ============================================================ -->
+<section class="section offer" id="offer">
+  <div class="container">
+    <p class="offer__text">
+      Это лето ты встретишь <span class="offer__hl">в&nbsp;коротких шортах</span> и&nbsp;лёгких платьях.
+      <br/>Без отёков. Без лишних пары килограммов. Без стеснения.
+    </p>
+    <p class="offer__sub">
+      За&nbsp;10&nbsp;дней интервальных тренировок дома мы&nbsp;запустим жиросжигание, разгоним метаболизм и&nbsp;подготовим тело к&nbsp;открытому сезону.
+    </p>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- 3. МЕТОД — почему интервальные эффективны (схема с ползунком) -->
+<!-- ============================================================ -->
+<section class="section method" id="method">
+  <div class="container">
+    <h2 class="section__title method__title">
+      Почему интервальные тренировки&nbsp;— <span class="method__title-mark">самый результативный способ похудеть</span> за&nbsp;короткое время?
+    </h2>
+    <p class="method__lead">
+      Чередование интенсивных шагов и&nbsp;короткого отдыха разгоняет пульс выше, чем&nbsp;равномерная ходьба. Тело тратит больше энергии за&nbsp;то&nbsp;же время&nbsp;— и&nbsp;продолжает работать ещё долго после тренировки.
+    </p>
+
+    <div class="method__schema" aria-label="Схема интервальной тренировки">
+      <div class="method__bar">
+        <div class="method__seg method__seg--work" style="--w:5"><span class="method__seg-time">5&nbsp;мин</span><span class="method__seg-name">шагаем интенсивно</span></div>
+        <div class="method__seg method__seg--rest" style="--w:2"><span class="method__seg-time">2&nbsp;мин</span><span class="method__seg-name">отдых</span></div>
+        <div class="method__seg method__seg--work" style="--w:5"><span class="method__seg-time">5&nbsp;мин</span><span class="method__seg-name">шагаем интенсивно</span></div>
+        <div class="method__seg method__seg--rest" style="--w:2"><span class="method__seg-time">2&nbsp;мин</span><span class="method__seg-name">отдых</span></div>
+        <div class="method__seg method__seg--work" style="--w:5"><span class="method__seg-time">5&nbsp;мин</span><span class="method__seg-name">шагаем интенсивно</span></div>
+        <div class="method__cursor" aria-hidden="true">
+          <div class="method__cursor-line"></div>
+          <div class="method__cursor-dot"></div>
+        </div>
+      </div>
+      <div class="method__legend">
+        <span class="method__legend-item"><span class="method__legend-swatch method__legend-swatch--work"></span>Интенсивно: пульс выше, метаболизм разгоняется</span>
+        <span class="method__legend-item"><span class="method__legend-swatch method__legend-swatch--rest"></span>Отдых: тело не остывает, готовится к&nbsp;следующему рывку</span>
+      </div>
+    </div>
+
+    <div class="method__stats">
+      <div class="method__stat">
+        <div class="method__stat-num">+30<sup>%</sup></div>
+        <p>больше калорий, чем при обычной ходьбе той&nbsp;же длительности</p>
+      </div>
+      <div class="method__stat method__stat--hero">
+        <div class="method__stat-num">до&nbsp;48<sup>ч</sup></div>
+        <p>тело продолжает сжигать жир после окончания тренировки</p>
+      </div>
+      <div class="method__stat">
+        <div class="method__stat-num">15<sup>мин</sup></div>
+        <p>в&nbsp;день&nbsp;— достаточно одной тренировки. Без спортзала и&nbsp;тренажёров.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- 4. БОНУС — клубный доступ как продолжение лета                -->
+<!-- ============================================================ -->
+<section class="section bonus" id="bonus">
+  <div class="container">
+    <div class="bonus__card">
+      <div class="bonus__text">
+        <h2 class="bonus__h2">
+          Интенсив&nbsp;— только <span class="bonus__hl">старт сезона</span>
+        </h2>
+        <p class="bonus__lead">
+          После 10&nbsp;дней интервалов ты&nbsp;не&nbsp;остаёшься без программы. К&nbsp;тарифу мы&nbsp;открываем полный доступ к&nbsp;клубу Шагай&nbsp;Дома. У&nbsp;тебя есть целое лето, чтобы закрепить и&nbsp;преумножить результат.
+        </p>
+        <ul class="bonus__list">
+          <li><span class="bonus__dot"></span>350+ тренировок разного уровня&nbsp;— на&nbsp;каждый день</li>
+          <li><span class="bonus__dot"></span>60 рецептов от&nbsp;диетолога и&nbsp;меню-конструктор</li>
+          <li><span class="bonus__dot"></span>Чат участниц и&nbsp;поддержка куратора</li>
+          <li><span class="bonus__dot"></span>Тренировки для спины, растяжки, домашние силовые</li>
+        </ul>
+      </div>
+      <div class="bonus__visual" aria-hidden="true">
+        <div class="bonus__visual-num">350<sup>+</sup></div>
+        <div class="bonus__visual-label">тренировок<br/>в&nbsp;клубе</div>
+        <div class="bonus__visual-ring"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- 5. ТАРИФЫ                                                    -->
+<!-- ============================================================ -->
+<section class="rates-banner">
+  <div class="container">
+    <h2>Запишись на&nbsp;«Шагай и&nbsp;Качай» и&nbsp;получи доступ ко&nbsp;<span class="accent">всему клубу Шагай&nbsp;Дома</span></h2>
+  </div>
+</section>
+
+<section class="section rates" id="rates">
+  <div class="container">
+    <div class="rates__grid">
+
+      <article class="rate-card">
+        <span class="rate-card__badge-top rate-card__badge-top--bonus">3&nbsp;вместо&nbsp;2!</span>
+        <span class="rate-card__discount">Спец-условия</span>
+        <h3 class="rate-card__title">«Шагай и&nbsp;Качай» + Абонемент на&nbsp;3&nbsp;месяца</h3>
+        <div class="rate-card__price">
+          <span class="rate-card__new">2 990 ₽</span>
+          <span class="rate-card__monthly">997 ₽ в&nbsp;месяц</span>
+        </div>
+        <a href="#popup-installment" class="rate-card__installment" data-popup>Доступна рассрочка 6 платежей по 499 ₽</a>
+        <ul class="rate-card__features">
+          <li class="rate-card__features-hero"><strong>Интенсив «Шагай и&nbsp;Качай»:</strong></li>
+          <li class="rate-card__features-bright"><span class="rate-card__bullet-emoji">🔥</span>10 дней интервальных тренировок с&nbsp;Настей</li>
+          <li class="rate-card__features-bright"><span class="rate-card__bullet-emoji">🎵</span>Музыкальные разминки на&nbsp;каждый день</li>
+          <li class="rate-card__features-bright"><span class="rate-card__bullet-emoji">🍜</span>Меню-конструктор от&nbsp;диетолога + бонус</li>
+          <li class="rate-card__features-hero"><strong>Абонемент в&nbsp;клуб «Шагай&nbsp;Дома»:</strong></li>
+          <li>25 программ и 350+ шагательных тренировок</li>
+          <li>60 рецептов полезной еды, вебинары про здоровье</li>
+          <li>30 тренировок и&nbsp;растяжек для здоровья спины</li>
+          <li>Поддержка куратора и&nbsp;чата участниц</li>
+        </ul>
+        <button type="button" class="btn btn--primary btn--block" data-popup="popup-buy-3m" data-metrika-goal="intervals-rate-3m-click">Получить интенсив</button>
+        <a href="https://my.walk-walk.ru/intervals" class="rate-card__alt-link" target="_blank" rel="noopener" data-metrika-goal="intervals-have-subscription-3m">У меня уже есть абонемент</a>
+      </article>
+
+      <article class="rate-card rate-card--featured">
+        <span class="rate-card__badge-top">Хит продаж</span>
+        <span class="rate-card__discount">−40% к&nbsp;году</span>
+        <h3 class="rate-card__title">«Шагай и&nbsp;Качай» + Абонемент на&nbsp;6&nbsp;месяцев</h3>
+        <div class="rate-card__price">
+          <span class="rate-card__new">4 190 ₽</span>
+          <span class="rate-card__monthly">698 ₽ в&nbsp;месяц</span>
+        </div>
+        <a href="#popup-installment" class="rate-card__installment" data-popup>Доступна рассрочка 6 платежей по 698 ₽</a>
+        <ul class="rate-card__features">
+          <li class="rate-card__features-hero"><strong>Интенсив «Шагай и&nbsp;Качай»:</strong></li>
+          <li class="rate-card__features-bright"><span class="rate-card__bullet-emoji">🔥</span>10 дней интервальных тренировок с&nbsp;Настей</li>
+          <li class="rate-card__features-bright"><span class="rate-card__bullet-emoji">🎵</span>Музыкальные разминки на&nbsp;каждый день</li>
+          <li class="rate-card__features-bright"><span class="rate-card__bullet-emoji">🍜</span>Меню-конструктор от&nbsp;диетолога + бонус</li>
+          <li class="rate-card__features-hero"><strong>Абонемент в&nbsp;клуб «Шагай&nbsp;Дома»:</strong></li>
+          <li>25 программ и 350+ шагательных тренировок</li>
+          <li>60 рецептов полезной еды, вебинары про здоровье</li>
+          <li>30 тренировок и&nbsp;растяжек для здоровья спины</li>
+          <li>Поддержка куратора и&nbsp;чата участниц</li>
+        </ul>
+        <button type="button" class="btn btn--white btn--block" data-popup="popup-buy-6m" data-metrika-goal="intervals-rate-6m-click">Получить интенсив</button>
+        <a href="https://my.walk-walk.ru/intervals" class="rate-card__alt-link rate-card__alt-link--on-red" target="_blank" rel="noopener" data-metrika-goal="intervals-have-subscription-6m">У меня уже есть абонемент</a>
+      </article>
+
+      <article class="rate-card">
+        <span class="rate-card__badge-top rate-card__badge-top--best">Самый выгодный</span>
+        <span class="rate-card__discount">−65% к&nbsp;году</span>
+        <h3 class="rate-card__title">«Шагай и&nbsp;Качай» + Абонемент на&nbsp;2&nbsp;года</h3>
+        <div class="rate-card__price">
+          <span class="rate-card__new">8 190 ₽</span>
+          <span class="rate-card__monthly">341 ₽ в&nbsp;месяц</span>
+        </div>
+        <a href="#popup-installment" class="rate-card__installment" data-popup>Доступна рассрочка 6 платежей по 1 365 ₽</a>
+        <ul class="rate-card__features">
+          <li class="rate-card__features-hero"><strong>Интенсив «Шагай и&nbsp;Качай»:</strong></li>
+          <li class="rate-card__features-bright"><span class="rate-card__bullet-emoji">🔥</span>10 дней интервальных тренировок с&nbsp;Настей</li>
+          <li class="rate-card__features-bright"><span class="rate-card__bullet-emoji">🎵</span>Музыкальные разминки на&nbsp;каждый день</li>
+          <li class="rate-card__features-bright"><span class="rate-card__bullet-emoji">🍜</span>Меню-конструктор от&nbsp;диетолога + бонус</li>
+          <li class="rate-card__features-hero"><strong>Абонемент в&nbsp;клуб «Шагай&nbsp;Дома»:</strong></li>
+          <li><em>Бесплатное пополнение тренировок и&nbsp;программ</em></li>
+          <li>25 программ и 350+ шагательных тренировок</li>
+          <li>60 рецептов полезной еды, вебинары про здоровье</li>
+          <li>30 тренировок и&nbsp;растяжек для здоровья спины</li>
+          <li>Поддержка куратора и&nbsp;чата участниц</li>
+        </ul>
+        <button type="button" class="btn btn--primary btn--block" data-popup="popup-buy-2y" data-metrika-goal="intervals-rate-2y-click">Получить интенсив</button>
+        <a href="https://my.walk-walk.ru/intervals" class="rate-card__alt-link" target="_blank" rel="noopener" data-metrika-goal="intervals-have-subscription-2y">У меня уже есть абонемент</a>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- 6. ГОСУДАРСТВО ПОДТВЕРЖДАЕТ — образовательная лицензия       -->
+<!-- ============================================================ -->
+<section class="section license" id="license">
+  <div class="container">
+    <div class="license__grid">
+      <div class="license__text">
+        <h2 class="license__h2">
+          <span class="license__h2-accent">Государство подтверждает</span>
+          эффективность наших тренировок
+        </h2>
+
+        <div class="license__row">
+          <div class="license__shield" aria-hidden="true">
+            <img src="https://static.tildacdn.com/tild3636-6639-4035-b463-653332363338/12.png" alt="" />
+          </div>
+          <p class="license__row-text">
+            Мы&nbsp;официально лицензированы как образовательная организация, потому что наши тренировки составлены совместно с&nbsp;врачами и&nbsp;дипломированными тренерами.
+          </p>
+        </div>
+
+        <div class="license__card">
+          <img class="license__card-photo" src="https://static.tildacdn.com/tild3133-6630-4563-b339-633964646635/10.png" alt="Тренеры Шагай Дома" loading="lazy" />
+          <div class="license__card-text">
+            <p>Каждая тренировка&nbsp;— это продуманные движения, которые активируют жиросжигание, укрепляют мышцы и&nbsp;улучшают самочувствие.</p>
+            <p>Всё разработано по&nbsp;принципам медицинской гимнастики и&nbsp;ЛФК.</p>
+          </div>
+        </div>
+
+        <a href="#rates" class="btn btn--primary btn--lg license__cta" data-metrika-goal="intervals-license-cta">
+          Начать худеть на&nbsp;шагах
+        </a>
+      </div>
+
+      <div class="license__certificate">
+        <img src="https://static.tildacdn.com/tild3662-3066-4463-b931-363261303065/Group_20.png" alt="Сертификат образовательной лицензии Шагай Дома" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- 7. КЕЙСЫ + ОТЗЫВЫ (marquee)                                 -->
+<!-- ============================================================ -->
+<section class="section cases" id="cases">
+  <div class="container">
+    <h2 class="section__title">Как менялись участницы наших&nbsp;интенсивов <br/><span class="section__title-sub">и&nbsp;программ клуба Шагай&nbsp;Дома</span></h2>
+    <p class="cases__disclaimer">* Имена в&nbsp;отзывах изменены, истории и&nbsp;результаты&nbsp;— реальные.</p>
+
+    <!-- Лента кейсов: бесконечный автоскролл влево (pause-on-hover).
+         Дублируем содержимое 2 раза для бесшовной петли. -->
+    <div class="marquee marquee--cases" aria-label="Фото участниц до/после">
+      <div class="marquee__track">
+        <a class="case-tile" href="assets/cases/case-1.webp" target="_blank"><img src="assets/cases/case-1.webp" alt="Кейс 1" loading="lazy" /></a>
+        <a class="case-tile" href="assets/cases/case-2.webp" target="_blank"><img src="assets/cases/case-2.webp" alt="Кейс 2" loading="lazy" /></a>
+        <a class="case-tile" href="assets/cases/case-3.webp" target="_blank"><img src="assets/cases/case-3.webp" alt="Кейс 3" loading="lazy" /></a>
+        <a class="case-tile" href="assets/cases/case-4.webp" target="_blank"><img src="assets/cases/case-4.webp" alt="Кейс 4" loading="lazy" /></a>
+        <a class="case-tile" href="assets/cases/case-5.webp" target="_blank"><img src="assets/cases/case-5.webp" alt="Кейс 5" loading="lazy" /></a>
+        <a class="case-tile" href="assets/cases/case-6.webp" target="_blank"><img src="assets/cases/case-6.webp" alt="Кейс 6" loading="lazy" /></a>
+        <a class="case-tile" href="assets/cases/case-7.webp" target="_blank"><img src="assets/cases/case-7.webp" alt="Кейс 7" loading="lazy" /></a>
+        <a class="case-tile" href="assets/cases/case-8.webp" target="_blank"><img src="assets/cases/case-8.webp" alt="Кейс 8" loading="lazy" /></a>
+        <a class="case-tile" href="assets/cases/case-9.webp" target="_blank"><img src="assets/cases/case-9.webp" alt="Кейс 9" loading="lazy" /></a>
+        <a class="case-tile" href="assets/cases/case-10.webp" target="_blank"><img src="assets/cases/case-10.webp" alt="Кейс 10" loading="lazy" /></a>
+        <!-- Дубль для бесшовной петли -->
+        <a class="case-tile" href="assets/cases/case-1.webp" target="_blank" aria-hidden="true"><img src="assets/cases/case-1.webp" alt="" loading="lazy" /></a>
+        <a class="case-tile" href="assets/cases/case-2.webp" target="_blank" aria-hidden="true"><img src="assets/cases/case-2.webp" alt="" loading="lazy" /></a>
+        <a class="case-tile" href="assets/cases/case-3.webp" target="_blank" aria-hidden="true"><img src="assets/cases/case-3.webp" alt="" loading="lazy" /></a>
+        <a class="case-tile" href="assets/cases/case-4.webp" target="_blank" aria-hidden="true"><img src="assets/cases/case-4.webp" alt="" loading="lazy" /></a>
+        <a class="case-tile" href="assets/cases/case-5.webp" target="_blank" aria-hidden="true"><img src="assets/cases/case-5.webp" alt="" loading="lazy" /></a>
+        <a class="case-tile" href="assets/cases/case-6.webp" target="_blank" aria-hidden="true"><img src="assets/cases/case-6.webp" alt="" loading="lazy" /></a>
+        <a class="case-tile" href="assets/cases/case-7.webp" target="_blank" aria-hidden="true"><img src="assets/cases/case-7.webp" alt="" loading="lazy" /></a>
+        <a class="case-tile" href="assets/cases/case-8.webp" target="_blank" aria-hidden="true"><img src="assets/cases/case-8.webp" alt="" loading="lazy" /></a>
+        <a class="case-tile" href="assets/cases/case-9.webp" target="_blank" aria-hidden="true"><img src="assets/cases/case-9.webp" alt="" loading="lazy" /></a>
+        <a class="case-tile" href="assets/cases/case-10.webp" target="_blank" aria-hidden="true"><img src="assets/cases/case-10.webp" alt="" loading="lazy" /></a>
+      </div>
+    </div>
+
+    <!-- Лента отзывов: автоскролл вправо (обратная сторона для контраста). -->
+    <div class="marquee marquee--reviews marquee--reverse" aria-label="Текстовые отзывы участниц">
+      <div class="marquee__track">
+        <article class="review-card"><div class="review-card__head"><img src="https://static.tildacdn.com/tild3538-3333-4330-b830-653537663662/8.png" alt="" /><strong>Снежана</strong></div><p>Хочу поделиться: за 4 месяца минус 17 кг! Комплексная работа с питанием, нагрузкой, головой.</p></article>
+        <article class="review-card"><div class="review-card__head"><img src="https://static.tildacdn.com/tild3134-6264-4766-a562-646636376438/1.png" alt="" /><strong>Мария</strong></div><p>Занимаюсь почти 2 недели, тренировки через день. На весах минус 1,5 кг! Спасибо за проект.</p></article>
+        <article class="review-card"><div class="review-card__head"><img src="https://static.tildacdn.com/tild3936-6631-4234-a139-383063613963/7.png" alt="" /><strong>Светлана</strong></div><p>Сбросила 5 кг. Малоподвижный образ жизни, питание было правильное — но без активности результата не было.</p></article>
+        <article class="review-card"><div class="review-card__head"><img src="https://static.tildacdn.com/tild6162-3466-4935-b634-326431333663/9.png" alt="" /><strong>Елена</strong></div><p>Моя норма пока 5–6 тыс шагов в сутки — работаю дома. Слежу за питанием. Итог за 2 недели — минус 4 кг!</p></article>
+        <article class="review-card"><div class="review-card__head"><img src="https://static.tildacdn.com/tild3239-3333-4234-b230-626633326263/15.png" alt="" /><strong>Александра</strong></div><p>Джинсы, которые весной были в обтяжку, теперь снимаю не растягивая. К новому году иду менять гардероб.</p></article>
+        <article class="review-card"><div class="review-card__head"><img src="https://static.tildacdn.com/tild3265-3037-4065-b736-343832356265/12.png" alt="" /><strong>Юлия</strong></div><p>Я в процессе сброса веса. Минус почти 40 кг за 2 года, иду дальше. Пришла пошагать — а тут весело!</p></article>
+        <article class="review-card"><div class="review-card__head"><img src="https://static.tildacdn.com/tild3063-6666-4235-b864-316236373836/14.png" alt="" /><strong>Ирина</strong></div><p>Можно я повосторгаюсь недельным результатом? Целых −2 см за неделю!</p></article>
+        <article class="review-card"><div class="review-card__head"><img src="https://static.tildacdn.com/tild3566-6338-4838-b762-626563306336/11.png" alt="" /><strong>Мария</strong></div><p>В клубе с пятницы — а сегодня на весах −1 кг. Не помню, когда последний раз видела цифру меньше 55.</p></article>
+        <article class="review-card"><div class="review-card__head"><img src="https://static.tildacdn.com/tild3938-3830-4233-a463-653166313962/13.png" alt="" /><strong>Юлия</strong></div><p>Тренируюсь каждый день с удовольствием. 20 тыс шагов — не проблема. Минус 8 кг за 4 месяца, обновила гардероб.</p></article>
+        <article class="review-card"><div class="review-card__head"><img src="https://static.tildacdn.com/tild6336-3634-4264-b834-383331383463/10.jpg" alt="" /><strong>Екатерина</strong></div><p>Появилась компания единомышленников, которые не дают сдаться. Похудела на 7 кг, объёмы тают.</p></article>
+        <!-- дубль -->
+        <article class="review-card" aria-hidden="true"><div class="review-card__head"><img src="https://static.tildacdn.com/tild3538-3333-4330-b830-653537663662/8.png" alt="" /><strong>Снежана</strong></div><p>Хочу поделиться: за 4 месяца минус 17 кг!</p></article>
+        <article class="review-card" aria-hidden="true"><div class="review-card__head"><img src="https://static.tildacdn.com/tild3134-6264-4766-a562-646636376438/1.png" alt="" /><strong>Мария</strong></div><p>Занимаюсь почти 2 недели, тренировки через день. На весах минус 1,5 кг!</p></article>
+        <article class="review-card" aria-hidden="true"><div class="review-card__head"><img src="https://static.tildacdn.com/tild3936-6631-4234-a139-383063613963/7.png" alt="" /><strong>Светлана</strong></div><p>Сбросила 5 кг. Без активности результата не было — теперь есть.</p></article>
+        <article class="review-card" aria-hidden="true"><div class="review-card__head"><img src="https://static.tildacdn.com/tild6162-3466-4935-b634-326431333663/9.png" alt="" /><strong>Елена</strong></div><p>Итог за 2 недели — минус 4 кг!</p></article>
+        <article class="review-card" aria-hidden="true"><div class="review-card__head"><img src="https://static.tildacdn.com/tild3239-3333-4234-b230-626633326263/15.png" alt="" /><strong>Александра</strong></div><p>Джинсы, которые весной были в обтяжку, теперь снимаю не растягивая.</p></article>
+        <article class="review-card" aria-hidden="true"><div class="review-card__head"><img src="https://static.tildacdn.com/tild3265-3037-4065-b736-343832356265/12.png" alt="" /><strong>Юлия</strong></div><p>Минус почти 40 кг за 2 года. Пришла пошагать для разнообразия — а тут весело!</p></article>
+        <article class="review-card" aria-hidden="true"><div class="review-card__head"><img src="https://static.tildacdn.com/tild3063-6666-4235-b864-316236373836/14.png" alt="" /><strong>Ирина</strong></div><p>Целых −2 см за неделю!</p></article>
+        <article class="review-card" aria-hidden="true"><div class="review-card__head"><img src="https://static.tildacdn.com/tild3566-6338-4838-b762-626563306336/11.png" alt="" /><strong>Мария</strong></div><p>В клубе с пятницы — а сегодня на весах −1 кг.</p></article>
+        <article class="review-card" aria-hidden="true"><div class="review-card__head"><img src="https://static.tildacdn.com/tild3938-3830-4233-a463-653166313962/13.png" alt="" /><strong>Юлия</strong></div><p>20 тыс шагов в день — не проблема. Минус 8 кг за 4 месяца.</p></article>
+        <article class="review-card" aria-hidden="true"><div class="review-card__head"><img src="https://static.tildacdn.com/tild6336-3634-4264-b834-383331383463/10.jpg" alt="" /><strong>Екатерина</strong></div><p>Похудела на 7 кг, объёмы тают.</p></article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- 7. НУЖНА ПОМОЩЬ                                              -->
+<!-- ============================================================ -->
+<section class="section help" id="contacts">
+  <div class="container help__inner">
+    <h2 class="section__title">Нужна помощь?</h2>
+    <p class="help__sub">Напишите нам, если есть вопросы</p>
+    <div class="help__buttons">
+      <a class="btn btn--primary btn--lg" target="_blank" rel="noopener" href="https://wa.me/+905510983369?text=Здравствуйте%21%20У%20меня%20вопрос%20по%20интенсиву%20Стройный%20живот">Написать в WhatsApp</a>
+      <a class="btn btn--primary btn--lg" target="_blank" rel="noopener" href="https://max.ru/u/f9LHodD0cOLsgLHI5aFkynmQFtVDv8Yk8kyyWLTi-7oDXXItbJp_HIFZlRE">Написать в MAX</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- 8. ПОДВАЛ (FOOTER)                                           -->
+<!-- ============================================================ -->
+<footer class="footer">
+  <div class="container footer__grid">
+
+    <div class="footer__col footer__col--main">
+      <h2 class="footer__brand">Шагай дома</h2>
+
+      <div class="footer__phones">
+        <p class="footer__phones-title">Телефоны наших менеджеров:</p>
+        <p><a href="tel:+79990668100">+7 (999) 066-81-00</a> — Отдел заботы о клиентах (Анна и Катя)</p>
+        <p><a href="tel:+905510983369">+90 (551) 098-33-69</a> — Отдел заботы о клиентах (Александра)</p>
+      </div>
+
+      <ul class="footer__links">
+        <li><a href="https://walk-walk.ru/privacy" target="_blank" rel="noopener">Политика конфиденциальности</a></li>
+        <li><a href="https://walk-walk.ru/offer" target="_blank" rel="noopener">Публичная оферта</a></li>
+        <li><a href="https://walk-walk.ru/ad" target="_blank" rel="noopener">Согласие на рекламную рассылку</a></li>
+        <li><a href="https://walk-walk.ru/approval" target="_blank" rel="noopener">Согласие на обработку персональных данных</a></li>
+        <li><a href="https://walk-walk.ru/safe" target="_blank" rel="noopener">Список противопоказаний</a></li>
+        <li><a href="https://walk-walk.ru/education" target="_blank" rel="noopener">Сведения об образовательной организации</a></li>
+        <li><a href="https://edu.gov.ru/" target="_blank" rel="noopener">Министерство просвещения РФ</a></li>
+      </ul>
+    </div>
+
+    <div class="footer__col footer__col--legal">
+      <p>ИП Кириченко Дмитрий Павлович</p>
+      <p>ОГРНИП: 316222500086383</p>
+      <p>ИНН: 222391942312</p>
+
+      <div class="footer__socials">
+        <a href="https://vk.com/walk_is_love" target="_blank" rel="noopener" aria-label="VK">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M12.785 16.241s.288-.032.435-.193c.135-.148.13-.426.13-.426s-.018-1.298.582-1.49c.591-.188 1.35 1.254 2.155 1.808.609.42 1.072.328 1.072.328l2.155-.031s1.127-.07.593-.96c-.044-.073-.311-.659-1.604-1.864-1.354-1.262-1.172-1.058.458-3.249.993-1.334 1.39-2.149 1.266-2.498-.118-.332-.853-.244-.853-.244l-2.446.015s-.181-.025-.315.056c-.131.08-.215.265-.215.265s-.385.99-.9 1.831c-1.083 1.775-1.516 1.869-1.693 1.755-.412-.266-.31-1.075-.31-1.65 0-1.795.272-2.543-.531-2.738-.266-.064-.462-.107-1.143-.114-.874-.009-1.613.003-2.032.208-.279.136-.494.439-.363.456.162.022.529.099.724.365.252.342.243 1.113.243 1.113s.144 2.116-.337 2.378c-.331.18-.785-.187-1.751-1.852-.495-.852-.869-1.794-.869-1.794s-.072-.176-.201-.27c-.156-.114-.374-.15-.374-.15l-2.325.015s-.349.01-.477.161c-.114.135-.009.413-.009.413s1.821 4.259 3.884 6.406c1.892 1.967 4.04 1.838 4.04 1.838h.973z"/></svg>
+        </a>
+        <a href="https://dzen.ru/walkislove" target="_blank" rel="noopener" aria-label="Дзен">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 4.5c1.244 5.376 2.124 6.256 7.5 7.5-5.376 1.244-6.256 2.124-7.5 7.5-1.244-5.376-2.124-6.256-7.5-7.5 5.376-1.244 6.256-2.124 7.5-7.5z"/></svg>
+        </a>
+        <a href="https://www.youtube.com/@walk_is_love" target="_blank" rel="noopener" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.546 15.568V8.432L15.818 12l-6.272 3.568z"/></svg>
+        </a>
+        <a href="https://ok.ru/group/70000006886921" target="_blank" rel="noopener" aria-label="OK">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M12 1.5a4.5 4.5 0 1 0 0 9 4.5 4.5 0 0 0 0-9zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm3.66 6.6a8.32 8.32 0 0 1-2.18.93l1.99 2a1.65 1.65 0 1 1-2.34 2.34L12 17.34l-2.12 2.13a1.65 1.65 0 0 1-2.34-2.34l1.99-2a8.32 8.32 0 0 1-2.19-.93 1.65 1.65 0 0 1 1.73-2.8c1.83 1.13 4.05 1.13 5.87 0a1.65 1.65 0 0 1 1.73 2.8z"/></svg>
+        </a>
+      </div>
+
+      <p class="footer__disclaimer">* Деятельность Meta и её продуктов Фейсбук и Инстаграм признана экстремистской и запрещена на территории Российской Федерации</p>
+    </div>
+
+  </div>
+
+  <div class="footer__bottom">
+    <div class="container footer__bottom-inner">
+      <span>© ИП Кириченко Д.П., <span id="footerYear">2026</span></span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================================ -->
+<!-- POPUP «Рассрочка»                                            -->
+<!-- ============================================================ -->
+<div class="popup" id="popup-installment" aria-hidden="true">
+  <div class="popup__overlay" data-close></div>
+  <div class="popup__box">
+    <button class="popup__close" data-close aria-label="Закрыть">×</button>
+    <h3>Рассрочка</h3>
+    <p>Вы можете приобрести абонемент в рассрочку. Для этого нажмите на кнопку «Получить интенсив», введите свою почту и на странице оплаты выберите вариант «Рассрочка».</p>
+  </div>
+</div>
+
+<!-- POPUP оплаты: 3 месяца -->
+<div class="popup" id="popup-buy-3m" aria-hidden="true">
+  <div class="popup__overlay" data-close></div>
+  <div class="popup__box">
+    <button class="popup__close" data-close aria-label="Закрыть">×</button>
+    <h3>«Шагай и Качай» + Абонемент на 3 месяца</h3>
+    <p class="popup__sub">Цена 2 990 ₽ — оплатите за 1 минуту</p>
+    <div class="popup__widget">
+      <!-- TODO: подставить новый ID GetCourse-виджета для интенсива «Шагай и Качай» (3 мес) -->
+      <script id="3cbe940a1f45f8d39a2b291b0a19847e915d7091" src="https://my.walk-walk.ru/pl/lite/widget/script?id=1608663"></script>
+    </div>
+  </div>
+</div>
+
+<!-- POPUP оплаты: 6 месяцев -->
+<div class="popup" id="popup-buy-6m" aria-hidden="true">
+  <div class="popup__overlay" data-close></div>
+  <div class="popup__box">
+    <button class="popup__close" data-close aria-label="Закрыть">×</button>
+    <h3>«Шагай и Качай» + Абонемент на 6 месяцев</h3>
+    <p class="popup__sub">Цена 4 190 ₽ — оплатите за 1 минуту</p>
+    <div class="popup__widget">
+      <!-- TODO: подставить новый ID GetCourse-виджета для интенсива «Шагай и Качай» (6 мес) -->
+      <script id="d498e7ad8c4a4437a049a7facf289b89866b8bdb" src="https://my.walk-walk.ru/pl/lite/widget/script?id=1608668"></script>
+    </div>
+  </div>
+</div>
+
+<!-- POPUP оплаты: 2 года -->
+<div class="popup" id="popup-buy-2y" aria-hidden="true">
+  <div class="popup__overlay" data-close></div>
+  <div class="popup__box">
+    <button class="popup__close" data-close aria-label="Закрыть">×</button>
+    <h3>«Шагай и Качай» + Абонемент на 2 года</h3>
+    <p class="popup__sub">Цена 8 190 ₽ — оплатите за 1 минуту</p>
+    <div class="popup__widget">
+      <!-- TODO: подставить новый ID GetCourse-виджета для интенсива «Шагай и Качай» (2 года) -->
+      <script id="da5762a895a343514ae79d4ebb8669b26d8a8b59" src="https://my.walk-walk.ru/pl/lite/widget/script?id=1608670"></script>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- STICKY MOBILE CTA (только ≤768px)                            -->
+<!-- ============================================================ -->
+<div class="sticky-cta" id="stickyCTA">
+  <a href="#rates" class="sticky-cta__btn" data-metrika-goal="intervals-sticky-cta">
+    <span class="sticky-cta__label">Получить интенсив</span>
+    <span class="sticky-cta__icon">→</span>
+  </a>
+</div>
+
+<button class="back-to-top" id="backToTop" aria-label="Наверх">↑</button>
+
+<script src="script.js?v=20260515"></script>
+</body>
+</html>
