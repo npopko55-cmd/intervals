@@ -1447,7 +1447,7 @@ h1, h2, h3 { font-family: var(--font-h); font-weight: 500; margin: 0; line-heigh
 }
 .hero__image {
   background-size: cover;
-  background-position: center top;  /* верх фото — лицо Насти */
+  background-position: center 25%;  /* кадр обеих девушек — корпус в фокусе */
   border-radius: var(--radius-sm);
   height: 100%;
   min-height: 360px;
