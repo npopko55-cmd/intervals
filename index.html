@@ -19,12 +19,16 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preconnect" href="https://static.tildacdn.com" crossorigin />
+
+  <!-- Preload основных шрифтов заголовков (Unbounded 600, кириллица) — убирает FOUT-вспышку при загрузке -->
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="https://fonts.gstatic.com/s/unbounded/v12/Yq6W-LOTXCb04q32xlpwv8ZfvRIkSYZH.woff2" />
+
   <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600&family=Inter:wght@400;500;600&family=Caveat:wght@600;700&display=swap&subset=latin,cyrillic" rel="stylesheet" />
 
   <!-- Preload hero-картинки -->
   <link rel="preload" as="image" href="assets/hero/hero-2girls.webp" fetchpriority="high" />
 
-  <link rel="stylesheet" href="styles.css?v=intv-4" />
+  <link rel="stylesheet" href="styles.css?v=intv-6" />
 </head>
 <body>
 
@@ -358,7 +362,7 @@
 <!-- ============================================================ -->
 <section class="section cases" id="cases">
   <div class="container">
-    <h2 class="section__title">Как менялись участницы наших&nbsp;интенсивов <br/><span class="section__title-sub">и&nbsp;программ клуба Шагай&nbsp;Дома</span></h2>
+    <h2 class="section__title cases__title">Как менялись участницы клуба <span class="section__title-sub">Шагай Дома</span></h2>
 
     <!-- Лента кейсов: бесконечный автоскролл влево (pause-on-hover).
          Дублируем содержимое 2 раза для бесшовной петли. -->

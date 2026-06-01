@@ -45,7 +45,9 @@ body {
   word-wrap: break-word;       /* длинные слова не торчат */
   overflow-wrap: break-word;
 }
-h1, h2, h3 { word-wrap: break-word; overflow-wrap: break-word; hyphens: manual; }
+/* Длинные русские слова не должны разрываться посередине: «интенсив-ов» и т.п.
+   `break-word` оставляем как safety-net для совсем экстремальных случаев. */
+h1, h2, h3 { overflow-wrap: break-word; word-break: keep-all; hyphens: manual; text-wrap: balance; }
 img { max-width: 100%; display: block; }
 a { color: inherit; text-decoration: none; }
 button { font: inherit; cursor: pointer; }
@@ -2292,10 +2294,23 @@ h1, h2, h3 { font-family: var(--font-h); font-weight: 500; margin: 0; line-heigh
   .method__legend { font-size: 13px; gap: 14px; }
 }
 @media (max-width: 540px) {
-  .method__bar { padding: 4px; gap: 4px; }
-  .method__seg { padding: 14px 4px; min-height: 80px; border-radius: 10px; }
+  /* На мобиле забываем 5fr/2fr пропорции — все 5 сегментов одинаковые, иначе «5 мин» не помещается */
+  .method__bar {
+    grid-template-columns: repeat(5, 1fr);
+    padding: 3px;
+    gap: 3px;
+  }
+  .method__seg {
+    padding: 12px 2px;
+    min-height: 64px;
+    border-radius: 9px;
+    min-width: 0;             /* позволяет grid сжимать ниже content size */
+  }
+  .method__seg-time { font-size: 15px; letter-spacing: -0.5px; }
   .method__seg-name { display: none; }
-  .method__cursor-dot { width: 14px; height: 14px; top: -6px; }
+  .method__cursor-dot { width: 12px; height: 12px; top: -5px; }
+  .method__legend { font-size: 12px; gap: 6px 12px; }
+  .method__legend-item { flex-basis: 100%; }
 }
 
 /* 4. BONUS — клубный доступ как продолжение */
