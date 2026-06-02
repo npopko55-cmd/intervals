@@ -2770,3 +2770,32 @@ section[id],
     scroll-snap-align: start;
   }
 }
+
+/* =================================================================
+   ANTI-TILDA — на walk-walk.ru/intervals Тильда подмешивает свои
+   стили на <a>, .t-btn и т.п. Защищаем цвета кнопок !important.
+   ================================================================= */
+.btn.btn--primary {
+  background: var(--color-primary) !important;
+  color: #fff !important;
+  border-color: var(--color-primary) !important;
+}
+.btn.btn--white {
+  background: #fff !important;
+  color: var(--color-text) !important;
+}
+.btn.btn--outline {
+  color: var(--color-text) !important;
+}
+.btn.btn--outline-white {
+  color: #fff !important;
+}
+/* На hover/active/focus всё равно жёлтое (наш брендовый стиль) */
+@media (hover: hover) {
+  .btn.btn--primary:hover,
+  .btn.btn--white:hover {
+    background: var(--color-primary-hover) !important;
+    color: #1f1300 !important;
+    border-color: var(--color-primary-hover) !important;
+  }
+}
