@@ -1360,25 +1360,29 @@ h1, h2, h3 { font-family: var(--font-h); font-weight: 500; margin: 0; line-heigh
   line-height: 1.1;
 }
 
-/* CTA со стрелкой в кружке */
+/* CTA со стрелкой в кружке. Жёлтый акцент-бренда для максимального
+   контраста на красном hero-card фоне (была белая — терялась). */
 .hero__cta {
   display: flex !important;
   align-items: center;
   justify-content: space-between;
   gap: 12px;
   padding: 14px 18px !important;
+  background: #FFB600 !important;
+  color: #1f1300 !important;
+  border-color: #FFB600 !important;
 }
 .hero__cta-arrow {
   display: inline-flex;
   width: 36px; height: 36px;
   border-radius: 50%;
-  background: var(--color-primary);
-  color: #fff;
+  background: #1f1300;
+  color: #FFB600;
   align-items: center;
   justify-content: center;
   font-size: 18px;
   line-height: 0;
-  transition: transform .2s, background .2s;
+  transition: transform .2s, background .2s, color .2s;
 }
 .hero__cta-arrow svg {
   display: block;
@@ -2687,4 +2691,82 @@ h1, h2, h3 { font-family: var(--font-h); font-weight: 500; margin: 0; line-heigh
   color: var(--color-muted);
   margin: -16px 0 32px;
   font-style: italic;
+}
+
+/* =================================================================
+   POLISH PASS — a11y, scroll-margin, button sizes, section rhythm
+   ================================================================= */
+
+/* Видимый focus-ring для всех интерактивных элементов (keyboard a11y) */
+a:focus-visible,
+button:focus-visible,
+[role="button"]:focus-visible,
+input:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid #FFB600;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+.btn:focus-visible,
+.rate-card__alt-link:focus-visible,
+.sticky-cta__btn:focus-visible,
+.hero__cta:focus-visible { outline-offset: 4px; }
+
+/* Якоря не приземляются под sticky header */
+section[id],
+.rates-banner {
+  scroll-margin-top: 80px;
+}
+
+/* .btn--lg визуально больше, не меньше — фикс font-size */
+.btn--lg { font-size: 16px; padding: 18px 36px; }
+
+/* «У меня уже есть абонемент» на красной карточке — белая обводка с лучшим контрастом */
+.rate-card__alt-link--on-red {
+  border-color: rgba(255, 255, 255, 0.9);
+}
+
+/* Унифицированный вертикальный ритм между секциями: 80 / 100 */
+.section.offer,
+.section.method,
+.section.bonus,
+.section.license { padding: 100px 0; }
+.section.cases,
+.section.help { padding: 80px 0; }
+@media (max-width: 768px) {
+  .section.offer,
+  .section.method,
+  .section.bonus,
+  .section.license { padding: 64px 0; }
+  .section.cases,
+  .section.help { padding: 56px 0; }
+}
+
+/* =================================================================
+   MARQUEE — на мобиле палец-скролл с snap, без авто-анимации
+   ================================================================= */
+@media (max-width: 768px) {
+  .marquee {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    /* убираем mask чтобы не обрезало правый край при скролле */
+    -webkit-mask-image: none;
+            mask-image: none;
+  }
+  .marquee::-webkit-scrollbar { display: none; }
+  .marquee__track {
+    animation: none !important;             /* выключаем авто-движение */
+    width: max-content;
+    padding-right: 24px;
+  }
+  /* Скрываем aria-hidden дубль карточек на мобиле — иначе они засоряют скролл */
+  .marquee__track > [aria-hidden="true"] { display: none; }
+  /* Snap на каждую карточку */
+  .marquee--cases .case-tile,
+  .marquee--reviews .review-card {
+    scroll-snap-align: start;
+  }
 }

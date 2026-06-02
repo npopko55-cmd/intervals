@@ -36,6 +36,7 @@
     overlayNav.classList.toggle('is-open', open);
     overlayNav.setAttribute('aria-hidden', String(!open));
     overlayBackdrop?.classList.toggle('is-open', open);
+    burger?.setAttribute('aria-expanded', String(open));
     document.body.style.overflow = open ? 'hidden' : '';
   };
 
@@ -48,24 +49,48 @@
     a.addEventListener('click', () => setNavState(false));
   });
 
-  /* ---------- 4. Универсальные попапы (по ID) ---------- */
+  /* ---------- 4. Универсальные попапы (по ID) с focus-trap ---------- */
+  let lastFocusedBeforePopup = null;
+  const FOCUSABLE = 'a[href], button:not([disabled]), input:not([disabled]), [tabindex]:not([tabindex="-1"])';
+
+  const trapFocus = (popup, e) => {
+    const focusables = popup.querySelectorAll(FOCUSABLE);
+    if (!focusables.length) return;
+    const first = focusables[0];
+    const last = focusables[focusables.length - 1];
+    if (e.shiftKey && document.activeElement === first) {
+      e.preventDefault(); last.focus();
+    } else if (!e.shiftKey && document.activeElement === last) {
+      e.preventDefault(); first.focus();
+    }
+  };
+
   const openPopupById = (id) => {
     const popup = document.getElementById(id);
     if (!popup) return;
+    lastFocusedBeforePopup = document.activeElement;
     popup.classList.add('is-open');
     popup.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
+    // фокус на крестик закрытия
+    const closeBtn = popup.querySelector('.popup__close');
+    if (closeBtn) setTimeout(() => closeBtn.focus(), 50);
   };
   const closeAllPopups = () => {
+    const wasOpen = document.querySelectorAll('.popup.is-open').length > 0;
     document.querySelectorAll('.popup.is-open').forEach((p) => {
       p.classList.remove('is-open');
       p.setAttribute('aria-hidden', 'true');
     });
     document.body.style.overflow = '';
+    // вернуть фокус на то что было до открытия
+    if (wasOpen && lastFocusedBeforePopup) {
+      lastFocusedBeforePopup.focus();
+      lastFocusedBeforePopup = null;
+    }
   };
 
   // Любой элемент с data-popup="popup-id" открывает соответствующий попап.
-  // Для обратной совместимости: data-popup без значения → popup-installment.
   document.querySelectorAll('[data-popup]').forEach((trigger) => {
     trigger.addEventListener('click', (e) => {
       e.preventDefault();
@@ -80,6 +105,11 @@
     if (e.key === 'Escape') {
       closeAllPopups();
       setNavState(false);
+      return;
+    }
+    if (e.key === 'Tab') {
+      const openPopup = document.querySelector('.popup.is-open .popup__box');
+      if (openPopup) trapFocus(openPopup, e);
     }
   });
 
