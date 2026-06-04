@@ -1290,6 +1290,26 @@ h1, h2, h3 { font-family: var(--font-h); font-weight: 500; margin: 0; line-heigh
   border-radius: 4px;
   transform: skewX(-8deg);
 }
+/* «Интервальный» с жёлтой молнией-подчёркиванием */
+.hero__title-boltword {
+  display: inline-block;
+  position: relative;
+  padding-bottom: 0.18em;
+  white-space: nowrap;
+}
+.hero__title-boltline {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0.22em;
+  pointer-events: none;
+}
+/* На мобиле — позволим переносу не ломать вёрстку */
+@media (max-width: 480px) {
+  .hero__title-boltword { white-space: normal; }
+}
 
 /* Плашка «Старт 8 июня» */
 .hero__startbadge {
@@ -2798,4 +2818,22 @@ section[id],
     color: #1f1300 !important;
     border-color: var(--color-primary-hover) !important;
   }
+}
+
+/* Footer socials — Тильда красит <a> в чёрный, защищаем */
+.footer .footer__socials a {
+  background: rgba(255,255,255,.18) !important;
+  color: #fff !important;
+}
+.footer .footer__socials a svg { fill: currentColor !important; }
+@media (hover: hover) {
+  .footer .footer__socials a:hover {
+    background: #fff !important;
+    color: var(--color-primary) !important;
+  }
+}
+.footer .footer__socials a:active,
+.footer .footer__socials a:focus {
+  background: #fff !important;
+  color: var(--color-primary) !important;
 }

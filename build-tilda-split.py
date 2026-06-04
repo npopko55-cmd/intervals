@@ -23,7 +23,7 @@ from pathlib import Path
 
 BASE = Path(__file__).parent
 CDN = "https://npopko55-cmd.github.io/intervals"
-VER = "intv-H"
+VER = "intv-I"
 
 html = (BASE / "index.html").read_text(encoding="utf-8")
 body = re.search(r"<body[^>]*>(.*?)</body>", html, re.DOTALL).group(1)
